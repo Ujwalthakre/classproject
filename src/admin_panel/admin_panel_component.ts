@@ -12,6 +12,8 @@ import { AddTeacher } from "../add_teacher/add_teacher_component";
 })
 
 export class AdminPanel{
+
+
     onExit = output<void>();
 
     addStudent=false
@@ -25,5 +27,15 @@ export class AdminPanel{
     }
     exit(){
         this.onExit.emit();
+    }
+
+    handleBack(){
+        this.addStudent=false
+        this.addTeacher=false
+
+    }
+
+    handleExit(){
+        this.exit();
     }
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

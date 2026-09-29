@@ -1,5 +1,11 @@
 <table>
     <tr>
+        <td colspan="2">
+            <input type="button" value="exit" (click)="exit()">
+            <input type="button" value="back" (click)="back()">
+        </td>
+    </tr>
+    <tr>
         <td>
             <form>
                 <table>
@@ -53,55 +59,58 @@
                     <tr>
                         <th>Age:</th>
                         <th>
-                            <input type="text" placeholder="Enter student's age" [(ngModel)]="age" />
+                            <input type="text" placeholder="Enter student's age" name="age" [(ngModel)]="age" />
                         </th>
                     </tr>
                     <tr>
                         <th>Branch</th>
                         <th>
-                            <input type="text" placeholder="Enter student's Branch" [(ngModel)]="branch" />
+                            <input type="text" placeholder="Enter student's Branch" name="branch" [(ngModel)]="branch" />
                         </th>
                     </tr>
 
                     <tr>
                         <th>Year</th>
                         <th>
-                            <input type="text" placeholder="Enter student's year" [(ngModel)]="year" />
+                            <input type="text" placeholder="Enter student's year" name="year" [(ngModel)]="year" />
                         </th>
                     </tr>
                     <tr>
                         <th>Semister:</th>
                         <th>
-                            <input type="number" placeholder="Enter student's year" [(ngModel)]="sem" />
+                            <input type="number" placeholder="Enter student's year" name="sem" [(ngModel)]="sem" />
                         </th>
                     </tr>
                     <tr>
                         <th>Mobile Number:</th>
                         <th>
-                            <input type="text" placeholder="Enter student's number" [(ngModel)]="mobileNo" />
+                            <input type="text" placeholder="Enter student's number" name="mobileNo" [(ngModel)]="mobileNo" />
                         </th>
                     </tr>
                     <tr>
                         <th>Email:</th>
                         <th>
-                            <input type="text" placeholder="Enter student id" [(ngModel)]="email" />
+                            <input type="text" placeholder="Enter student id" name="email" [(ngModel)]="email" />
                         </th>
                     </tr>
                     <tr>
                         <th>Address:</th>
                         <th>
-                            <input type="text" placeholder="Enter student's address" [(ngModel)]="address" />
+                            <input type="text" placeholder="Enter student's address" name="address" [(ngModel)]="address" />
                         </th>
                     </tr>
                     <tr>
                         <th>Password:</th>
                         <th>
-                            <input type="text" placeholder="Enter student's password" [(ngModel)]="password" />
+                            <input type="text" placeholder="Enter student's password" name="password" [(ngModel)]="password" />
                         </th>
                     </tr>
                     <tr>
                         <th colspan="2">
                             <input type="button" value="save" (click)="save()">
+                        </th>
+                        <th>
+                            <input type="reset" value="clear"/>
                         </th>
                     </tr>
                 </table>

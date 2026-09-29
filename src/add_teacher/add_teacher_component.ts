@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, output } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -11,15 +11,15 @@ import { FormsModule } from "@angular/forms";
 
 export class AddTeacher{
 
-    tId=""
-    tName=""
-    tMobNum=""
-    tEmail=""
-    tPass=""
+    onTeaBack=output<void>();
+    onTeaExit=output<void>();
 
-    save(){
 
-    }
+    tId="";
+    tName="";
+    tMobNum="";
+    tEmail="";
+    tPass="";
 
     teachers=[{
         tId:101,
@@ -28,4 +28,23 @@ export class AddTeacher{
         tEmail:"teach@gmail.com",
         tPass:"1234"
     },]
+
+    save(){
+        this.teachers.push({
+            tId:parseInt(this.tId),
+            tName:this.tName,
+            tMobNum:this.tMobNum,
+            tEmail:this.tEmail,
+            tPass:this.tPass
+        })
+    }
+
+    back(){
+        this.onTeaBack.emit();
+    }
+    exit(){
+        this.onTeaExit.emit();
+    }
+
 }
+

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, output } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 
 @Component({
@@ -12,6 +12,11 @@ import { FormsModule } from "@angular/forms";
 
 
 export class AddStudent{
+
+    onStuBack=output<void>();
+    onStuExit=output<void>();
+
+
     id=""
     rollNo=""
     name=""
@@ -26,9 +31,7 @@ export class AddStudent{
     address=""
     password=""
 
-    save(){
-
-    }
+    
 
     students=[
         {
@@ -44,7 +47,32 @@ export class AddStudent{
             mobileNo:1234567899,
             email:"raju@gmail.com",
             address:"nagpur",
-            password:1234,
+            password: "12a34",
         },
     ]
-}
+
+    save(){
+        this.students.push({
+            id:parseInt(this.id),
+            rollNo:parseInt(this.rollNo),
+            name:this.name,
+            fatherName:this.fatherName,
+            gender:this.gender,
+            age:parseInt(this.age),
+            branch:this.branch,
+            year:parseInt(this.year),
+            sem:parseInt(this.sem),
+            mobileNo:parseInt(this.mobileNo),
+            email:this.email,
+            address:this.address,
+            password:this.password,
+        })
+    }
+
+    exit(){
+        this.onStuExit.emit();
+    }
+    back(){
+        this.onStuBack.emit();
+    }
+}  

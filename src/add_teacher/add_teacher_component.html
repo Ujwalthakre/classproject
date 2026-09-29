@@ -1,5 +1,11 @@
 <table>
     <tr>
+        <td colspan="2">
+            <input type="button" value="exit" (click)="exit()">
+            <input type="button" value="back" (click)="back()">
+        </td>
+    </tr>
+    <tr>
         <td>
             <form>
                 <table>
@@ -8,16 +14,15 @@
                             Teacher Id:
                         </td>
                         <td>
-                            <input type="text" [(ngModel)]="tId" placeholder="Enter Teacher ID">
+                            <input type="number" name="tId" [(ngModel)]="tId" placeholder="Enter Teacher ID">
                         </td>
                     </tr>
-
                     <tr>
                         <td>
                             Teacher Name:
                         </td>
                         <td>
-                            <input type="text" [(ngModel)]="tName" placeholder="Enter Teacher name">
+                            <input type="text" name="tName" [(ngModel)]="tName" placeholder="Enter Teacher name">
                         </td>
                     </tr>
                     <tr>
@@ -25,7 +30,7 @@
                             Teacher Mobile number:
                         </td>
                         <td>
-                            <input type="text" [(ngModel)]="tMobNum" placeholder="Enter Teacher mobileNo">
+                            <input type="text" name="tMobNum" [(ngModel)]="tMobNum" placeholder="Enter Teacher mobileNo">
                         </td>
                     </tr>
                     <tr>
@@ -33,7 +38,7 @@
                             Teacher Email:
                         </td>
                         <td>
-                            <input type="text" [(ngModel)]="tEmail" placeholder="Enter Teacher Email">
+                            <input type="text" name="tEmail" [(ngModel)]="tEmail" placeholder="Enter Teacher Email">
                         </td>
                     </tr>
                     <tr>
@@ -41,7 +46,7 @@
                             Teacher Password:
                         </td>
                         <td>
-                            <input type="text" [(ngModel)]="tPass" placeholder="Enter Teacher Password">
+                            <input type="text" name="tPass" [(ngModel)]="tPass" placeholder="Enter Teacher Password">
                         </td>
                     </tr>
                     <tr>

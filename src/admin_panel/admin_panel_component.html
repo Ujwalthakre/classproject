@@ -1,8 +1,8 @@
 @if (addStudent) {
-    <add_student></add_student>
+    <add_student (onStuBack)=handleBack() (onStuExit)=handleExit()></add_student>
 }
 @else if (addTeacher) {
-    <add_teacher></add_teacher>
+    <add_teacher (onTeaBack)=handleBack() (onTeaExit)=handleExit()></add_teacher>
 }
 @else {
         <h2>Admin Panel</h2>
