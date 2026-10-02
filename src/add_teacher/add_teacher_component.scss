@@ -1,0 +1,108 @@
+:host {
+  display: block;
+}
+
+.teacher-shell {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: rgba(10, 18, 34, 0.8);
+  border: 1px solid rgba(143, 173, 255, 0.28);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+}
+
+.teacher-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.teacher-toolbar input[type="button"] {
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.2rem;
+  background: linear-gradient(135deg, #8fe7d4, #7db8ff);
+  color: #061319;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 1.1fr) minmax(520px, 1.9fr);
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.teacher-form,
+.teacher-table {
+  background: rgba(17, 30, 48, 0.75);
+  border: 1px solid rgba(164, 182, 255, 0.2);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.teacher-form table,
+.teacher-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.teacher-form td,
+.teacher-table td,
+.teacher-table th,
+.teacher-form th {
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid rgba(180, 197, 255, 0.15);
+  color: #edf6ff;
+  text-align: left;
+}
+
+.teacher-form td:first-child {
+  width: 180px;
+  font-weight: 600;
+  color: #dfeeff;
+}
+
+.teacher-form input[type="text"],
+.teacher-form input[type="number"],
+.teacher-form input[type="password"] {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(164, 182, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(16, 28, 42, 0.95);
+  color: #edf6ff;
+}
+
+.teacher-form input[type="text"]::placeholder,
+.teacher-form input[type="number"]::placeholder,
+.teacher-form input[type="password"]::placeholder {
+  color: rgba(205, 225, 255, 0.55);
+}
+
+.teacher-form input[type="button"] {
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.3rem;
+  background: linear-gradient(135deg, #7ef0cf, #7bb8ff);
+  color: #061319;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.teacher-table th {
+  background: rgba(124, 159, 255, 0.12);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.teacher-table td {
+  font-size: 0.86rem;
+}
+
+.teacher-table tr:hover td {
+  background: rgba(127, 230, 205, 0.05);
+}

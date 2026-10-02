@@ -1,0 +1,120 @@
+:host {
+  display: block;
+}
+
+.student-shell {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: rgba(10, 18, 34, 0.8);
+  border: 1px solid rgba(143, 173, 255, 0.28);
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.toolbar input[type="button"] {
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem 1.1rem;
+  background: linear-gradient(135deg, #8fe7d4, #7bb8ff);
+  color: #071219;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.student-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 1.1fr) minmax(540px, 1.9fr);
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.form-panel,
+.table-panel {
+  background: rgba(17, 30, 48, 0.75);
+  border: 1px solid rgba(164, 182, 255, 0.2);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.form-panel table,
+.table-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.form-panel th,
+.form-panel td,
+.table-panel th,
+.table-panel td {
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid rgba(180, 197, 255, 0.15);
+  vertical-align: top;
+  text-align: left;
+  color: #edf6ff;
+}
+
+.form-panel th {
+  width: 160px;
+  font-weight: 600;
+  color: #dfeeff;
+}
+
+.form-panel input[type="text"],
+.form-panel input[type="number"],
+.form-panel input[type="password"] {
+  width: 100%;
+  padding: 0.78rem 0.9rem;
+  border: 1px solid rgba(164, 182, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(16, 28, 42, 0.95);
+  color: #edf6ff;
+}
+
+.form-panel input[type="text"]::placeholder,
+.form-panel input[type="number"]::placeholder,
+.form-panel input[type="password"]::placeholder {
+  color: rgba(205, 225, 255, 0.55);
+}
+
+.form-panel input[type="radio"] {
+  accent-color: #7fe6cd;
+}
+
+.form-panel .actions-row {
+  text-align: center;
+}
+
+.form-panel input[type="button"],
+.form-panel input[type="reset"] {
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem 1.3rem;
+  background: linear-gradient(135deg, #79f0cd, #75b7ff);
+  color: #061319;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0.25rem;
+}
+
+.table-panel th {
+  background: rgba(124, 159, 255, 0.12);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.table-panel td {
+  font-size: 0.85rem;
+}
+
+.table-panel tr:hover td {
+  background: rgba(127, 230, 205, 0.05);
+}

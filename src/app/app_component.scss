@@ -1,0 +1,132 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.page-shell {
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.page-shell.theme-day {
+  --bg-main: linear-gradient(135deg, #edf6ff 0%, #dfeeff 35%, #cfe6ff 100%);
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --header-border: rgba(93, 110, 172, 0.18);
+  --text-main: #0d1b2a;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(103, 126, 198, 0.18);
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --input-border: rgba(102, 120, 180, 0.2);
+  --button-main: linear-gradient(135deg, #f7b267, #f4845f);
+  --button-text: #1d1b2a;
+  --table-head: rgba(101, 117, 185, 0.12);
+  --table-row-hover: rgba(130, 148, 255, 0.08);
+}
+
+.page-shell.theme-night {
+  --bg-main: radial-gradient(circle at top, #1d3557 0%, #0b1020 38%, #050b13 100%);
+  --header-bg: rgba(10, 16, 29, 0.82);
+  --header-border: rgba(162, 177, 255, 0.25);
+  --text-main: #edf6ff;
+  --card-bg: rgba(10, 18, 34, 0.78);
+  --card-border: rgba(143, 173, 255, 0.32);
+  --input-bg: rgba(19, 31, 53, 0.9);
+  --input-border: rgba(160, 180, 255, 0.28);
+  --button-main: linear-gradient(135deg, #7ef0d3, #7ab8ff);
+  --button-text: #041018;
+  --table-head: rgba(124, 159, 255, 0.12);
+  --table-row-hover: rgba(127, 230, 205, 0.05);
+}
+
+header {
+  background: var(--header-bg);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--header-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.header-row {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+}
+
+header h2 {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(1.6rem, 2vw, 2.5rem);
+  letter-spacing: 0.08em;
+  color: var(--text-main);
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.theme-toggle {
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.1rem;
+  background: var(--button-main);
+  color: var(--button-text);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+main {
+  display: block;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.login-card,
+.panel-shell,
+.student-shell,
+.teacher-shell,
+.form-panel,
+.table-panel,
+.teacher-form,
+.teacher-table {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"],
+.form-panel input[type="text"],
+.form-panel input[type="number"],
+.form-panel input[type="password"],
+.teacher-form input[type="text"],
+.teacher-form input[type="number"],
+.teacher-form input[type="password"] {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-main);
+}
+
+.table-panel th,
+.teacher-table th {
+  background: var(--table-head);
+}
+
+.table-panel tr:hover td,
+.teacher-table tr:hover td {
+  background: var(--table-row-hover);
+}
+
+.login-card input[type="button"],
+.login-card input[type="reset"],
+.panel-actions input[type="button"],
+.toolbar input[type="button"],
+.teacher-toolbar input[type="button"],
+.form-panel input[type="button"],
+.form-panel input[type="reset"],
+.teacher-form input[type="button"] {
+  background: var(--button-main);
+  color: var(--button-text);
+}

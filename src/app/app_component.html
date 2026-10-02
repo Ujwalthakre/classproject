@@ -1,7 +1,14 @@
-<header>
-  <h2>School Management Portal</h2>
-</header>
+<div class="page-shell" [class.theme-day]="theme === 'day'" [class.theme-night]="theme === 'night'">
+  <header>
+    <div class="header-row">
+      <h2>School Management Portal</h2>
+      <button type="button" class="theme-toggle" (click)="toggleTheme()" aria-label="Toggle day and night mode">
+        {{ theme === 'day' ? '☀️ Day' : '🌙 Night' }}
+      </button>
+    </div>
+  </header>
 
-<main>
-  <router-outlet></router-outlet>
-</main>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>

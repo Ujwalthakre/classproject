@@ -10,4 +10,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'classproject';
+  theme: 'day' | 'night' = 'day';
+
+  toggleTheme(): void {
+    this.theme = this.theme === 'day' ? 'night' : 'day';
+  }
 }
